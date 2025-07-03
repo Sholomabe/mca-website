@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name - Merchant Cash Advance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom styles for the slider thumb */
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #3b82f6; /* blue-500 */
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            background: #3b82f6; /* blue-500 */
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">
+                <!-- Replace with your logo -->
+                YourLogo
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">How It Works</a>
+                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">About Us</a>
+                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">FAQ</a>
+                <a href="#application-form" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300">Apply Now</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#" class="block text-gray-600 hover:text-blue-500 py-2">How It Works</a>
+            <a href="#" class="block text-gray-600 hover:text-blue-500 py-2">About Us</a>
+            <a href="#" class="block text-gray-600 hover:text-blue-500 py-2">FAQ</a>
+            <a href="#application-form" class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mt-2 text-center">Apply Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white">
+        <div class="container mx-auto px-6 py-16 md:py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">Fast, Flexible Funding for Your Business</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">Get the cash advance you need to grow. Our simple application process provides decisions in minutes, not weeks.</p>
+            
+            <!-- Interactive Calculator -->
+            <div id="application-form" class="bg-white p-6 md:p-10 rounded-2xl shadow-2xl max-w-4xl mx-auto border border-gray-200">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Sliders -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label for="loan-amount-slider" class="font-semibold text-gray-700">How much do you need?</label>
+                                <span id="loan-amount-display" class="font-bold text-xl text-blue-600">$250,000</span>
+                            </div>
+                            <input type="range" min="5000" max="1000000" value="250000" step="5000" class="slider w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" id="loan-amount-slider">
+                        </div>
+                        <div>
+                            <label class="font-semibold text-gray-700 mb-2 block">Repayment Plan</label>
+                            <div id="repayment-options" class="flex border border-gray-300 rounded-lg p-1 bg-gray-100">
+                                <button data-plan="daily" class="repayment-btn flex-1 py-2 px-4 text-sm font-semibold rounded-md transition-colors duration-300 bg-white text-blue-600 shadow">Daily</button>
+                                <button data-plan="weekly" class="repayment-btn flex-1 py-2 px-4 text-sm font-semibold rounded-md transition-colors duration-300 text-gray-500">Weekly</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CTA -->
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-600 mb-4">Get a free, no-obligation quote based on your selection.</p>
+                        <button class="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Get My Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- How It Works Section -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Get Funded in 3 Easy Steps</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">1. Apply Online</h3>
+                    <p class="text-gray-600">Fill out our simple online form in minutes. Tell us about your business and how much funding you need.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">2. Upload Documents</h3>
+                    <p class="text-gray-600">Securely upload your bank and credit card processing statements for a quick review by our team.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                     <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">3. Get Funded</h3>
+                    <p class="text-gray-600">Once approved, the cash advance is deposited directly into your account, often within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Loan Amount Slider
+            const loanAmountSlider = document.getElementById('loan-amount-slider');
+            const loanAmountDisplay = document.getElementById('loan-amount-display');
+            
+            // Function to format the number with commas
+            const formatNumber = (num) => '$' + num.toLocaleString();
+
+            // Initialize display
+            loanAmountDisplay.textContent = formatNumber(parseInt(loanAmountSlider.value));
+
+            // Update display on slider input
+            loanAmountSlider.addEventListener('input', function() {
+                loanAmountDisplay.textContent = formatNumber(parseInt(this.value));
+            });
+
+            // Repayment Options Toggle
+            const repaymentOptions = document.getElementById('repayment-options');
+            const repaymentButtons = repaymentOptions.querySelectorAll('.repayment-btn');
+
+            repaymentOptions.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    repaymentButtons.forEach(btn => {
+                        btn.classList.remove('bg-white', 'text-blue-600', 'shadow');
+                        btn.classList.add('text-gray-500');
+                    });
+                    e.target.classList.add('bg-white', 'text-blue-600', 'shadow');
+                    e.target.classList.remove('text-gray-500');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
+I've updated the page with your requested changes. Let me know what you'd like to do ne
